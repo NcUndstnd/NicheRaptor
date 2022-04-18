@@ -1,149 +1,195 @@
-@font-face {
-  font-family: "Benguati";
-  src: url(../font/BenguiatITCbyBT-Book.otf);
-}
+@font-face
+  font-family: "Benguati"
+  src: url(../font/BenguiatITCbyBT-Book.otf)
 
-@font-face {
-  font-family: "Roboto";
-  src: url(../font/Roboto-Regular.ttf);
-}
+@font-face
+  font-family: "Roboto"
+  src: url(../font/Roboto-Regular.ttf)
 
-*{
-  transition: color 0.4s, transform 0.4s, fill 0.4s;
-}
+*
+  transition: color 0.4s, transform 0.4s, fill 0.4s
 
-/*--------------------------------------General--------------------------------------------------------*/
+\::-webkit-scrollbar
+  display: none
 
-::-webkit-scrollbar {
-  display: none;
-}
+body
+  margin: 0
+  text-align: center
+  line-height: 1.6
 
-body {
-  margin: 0;
-  text-align: center;
-  line-height: 1.6;
-}
+a
+  text-decoration: none
+  color: #ffffff
 
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
+input[type="checkbox"]
+  display: none
 
-/*---------------------------------------Header Content-----------------------------------------------*/
+  &:checked + label + ul
+    display: block
+    z-index: 1000
 
-header {
-  display: flex;
-  height: fit-content;
-  padding: 0.5%;
-  background-color: #000000;
-}
+label
+  display: none
 
-header nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 50%;
-}
+header
+  display: flex
+  height: fit-content
+  padding: 0.5%
+  background-color: #000000
 
-header nav a {
-  width: fit-content;
-}
+  nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 50%
 
-header nav a span {
-  font-size: 2rem;
-  font-family: "Benguati";
-}
+    ul
+      display: flex
+      width: 100%
+      justify-content: space-between
+      list-style-type: none
+      margin: 0
+      padding: 0
 
-header nav a span:hover {
-  color: #c0162f;
-}
+      li
+        display: inline-block
 
-header a {
-  width: 40%;
-}
+        a
+          width: fit-content
 
-header a svg {
-  width: 70%;
-  height: 100%;
-}
+          span
+            font-size: 2rem
+            font-family: "Benguati"
 
-header a svg g path {
-  fill: #ffffff;
-}
+            &:hover
+              color: #c0162f
 
-header a svg g path:first-child {
-  fill: #c0162f;
-}
+footer nav ul li a:hover
+  color: #c0162f
 
-/*--------------------------------------------Footer Content---------------------------------------------*/
+header
+  nav label svg path
+    stroke: #c0162f
 
-footer {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  background-color: #000000;
-}
+  a
+    width: 40%
 
-footer ul {
-  display: flex;
-  justify-content: space-between;
-  padding-inline-start: 0;
-  margin-block-start: 0.7rem;
-  margin-block-end: 0.7rem;
-}
+    svg
+      width: 70%
+      height: 100%
 
-footer nav {
-  display: flex;
-  justify-content: center;
-  font-size: 1.5rem;
-  font-family: "Benguati";
-}
+      g path
+        fill: #ffffff
 
-footer nav ul {
-  width: 25%;
-}
+footer address ul li a svg path
+  fill: #ffffff
 
-footer nav ul li a:hover {
-  color: #c0162f;
-}
+header a svg g path:first-child
+  fill: #c0162f
 
-footer address {
-  display: flex;
-  justify-content: center;
-}
+footer
+  address ul li a svg:hover
+    path
+      fill: #c0162f
 
-footer address ul {
-  width: 15%;
-}
+    #Logo
+      fill: #000000
 
-footer address ul li {
-  width: 25%;
-}
+  display: flex
+  position: relative
+  flex-direction: column
+  background-color: #000000
 
-footer address ul li a svg path {
-  fill: #ffffff;
-}
+  ul
+    display: flex
+    justify-content: space-between
+    padding-inline-start: 0
+    margin-block-start: 0.7rem
+    margin-block-end: 0.7rem
 
-footer address ul li a svg:hover path {
-  fill: #c0162f;
-}
+  nav
+    display: flex
+    justify-content: center
+    font-size: 1.5rem
+    font-family: "Benguati"
 
-footer address ul li a svg:hover #Logo {
-  fill: #000000;
-}
+    ul
+      list-style-type: none
+      width: 35%
 
-footer p {
-  color: #ffffff;
-  font-family: "Roboto";
-  margin-block-start: 0.7rem;
-  margin-block-end: 0.7rem;
-}
+  address
+    display: flex
+    justify-content: center
 
-footer::before {
-  width: 80%;
-  left: 10%;
-  bottom: 120%;
-  content: '';
-  position: absolute;
-  border-bottom: 0.2rem solid #dbdbdb;
-}
+    ul
+      list-style-type: none
+      width: 15%
+
+      li
+        width: 25%
+
+  p
+    color: #ffffff
+    font-family: "Roboto"
+    margin-block-start: 0.7rem
+    margin-block-end: 0.7rem
+
+  &::before
+    width: 80%
+    left: 10%
+    bottom: 120%
+    content: ''
+    position: absolute
+    border-bottom: 0.2rem solid #dbdbdb
+
+@media screen and (max-width: 1024px)
+  footer address ul
+    width: 20%
+
+@media screen and (max-width: 768px)
+  footer nav ul
+    width: 60%
+
+  header nav ul li a span
+    font-size: 1rem
+
+  footer
+    address ul
+      width: 30%
+
+    nav
+      font-size: 1.3rem
+
+@media screen and (max-width: 425px)
+  header
+    a
+      width: 50%
+
+    nav ul
+      display: none
+      right: 0
+      position: absolute
+      top: 2.6rem
+      padding-right: 0.5rem
+      background: #0000009d
+      width: 27%
+      text-align: right
+      border-radius: 0 0 0 10px
+
+  label
+    display: block
+    width: 100%
+    text-align: right
+    padding: 0.2rem 0.5rem 0 0
+
+  header nav label svg
+    height: 1.8rem
+    width: 1.8rem
+
+  footer nav
+    font-size: 1rem
+
+@media screen and (max-width: 320px)
+  footer
+    nav, p
+      font-size: 0.8rem

@@ -1,88 +1,92 @@
-main {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 60%;
-  margin: auto;
-}
+main
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  width: 60%
+  margin: auto
 
-main header {
-  padding: 0;
-  width: 100%;
-  background-color: #ffffff;
-  border-bottom: 0.3rem solid #dbdbdb;
-}
+  header
+    padding: 0
+    width: 100%
+    background-color: #ffffff
+    border-bottom: 0.3rem solid #dbdbdb
 
-main header h1 {
-  position: relative;
-  margin: 1rem 0 0 0;
-  font-size: 3rem;
-  color: #c0162f;
-}
+    h1
+      position: relative
+      margin: 1rem 0 0 0
+      font-size: 2.5rem
+      color: #c0162f
 
-main header h1::after{
-  width: 100%;
-  bottom: -6%;
-  left: 0;
-  content: '';
-  position: absolute;
-  border-bottom: 0.3rem solid #c0162f;
-}
+      &::after
+        width: 100%
+        bottom: -6%
+        left: 0
+        content: ''
+        position: absolute
+        border-bottom: 0.3rem solid #c0162f
 
-main section {
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100%;
-  margin-bottom: 6rem;
-}
+  section
+    display: flex
+    flex-wrap: wrap
+    border-radius: 10px
+    overflow: hidden
+    width: 100%
+    margin-bottom: 6rem
 
-main section article {
-  display: flex;
-  justify-content: space-between;
-}
+    article
+      display: flex
+      margin: 1rem 0 1rem 0
+      flex-wrap: wrap
+      justify-content: space-between
 
-main section article p {
-  display: flex;
-  font-family: "Roboto";
-  flex-direction: column;
-  text-align: left;
-  width: 49%;
-  font-size: 1.7rem;
-  font-weight: bold;
-}
+      h2
+        width: 100%
 
-main section article p a {
-  color: #000000;
-}
+        a
+          color: #000000
 
-main section article p a:hover {
-  color: #c0162f;
-}
+          &:hover
+            color: #c0162f
 
-main section article p span {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  color: #5c5c5c;
-}
+      p
+        display: flex
+        font-family: "Roboto"
+        flex-direction: column
+        text-align: left
+        width: 49%
+        font-size: 1.3rem
+        color: #5c5c5c
 
-main section article figure {
-  margin-left: 0;
-  margin-bottom: 0;
-  overflow: hidden;
-  width: 50%;
-}
+      figure
+        margin: 0
+        overflow: hidden
+        width: 49%
+        border-radius: 15px
 
-main section article:last-child figure {
-  border-radius: 0 0 0 15px;
-}
+        a img
+          width: 100%
+          height: 100%
 
-main section article figure a img {
-  width: 100%;
-  height: 100%;
-}
+          &:hover
+            transform: scale(1.1)
 
-main section article figure a img:hover {
-  transform: scale(1.1);
-}
+@media screen and (max-width: 1440px)
+  main
+    width: 70%
+
+@media screen and (max-width: 1024px)
+  main
+    width: 80%
+
+@media screen and (max-width: 768px)
+  main section article
+    p, figure
+      text-align: center
+      width: 100%
+
+@media screen and (max-width: 320px)
+  main header h1:after
+    bottom: -7%
+
+  footer::before
+    bottom: 110%
