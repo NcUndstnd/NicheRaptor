@@ -27,17 +27,13 @@ a {
   color: #ffffff;
 }
 
-input[type="checkbox"] {
+input[type="checkbox"], label{
   display: none;
 }
 
 input[type="checkbox"]:checked+label+ul {
   display: block;
   z-index: 1000;
-}
-
-label {
-  display: none;
 }
 
 header {
